@@ -1,4 +1,4 @@
-(defproject org.onyxplatform/onyx-redis "0.14.1.0"
+(defproject curbside/onyx-redis "0.14.1.1+writer"
   :description "Onyx plugin for redis"
   :url "https://github.com/onyx-platform/onyx-redis"
   :license {:name "Eclipse Public License"
@@ -15,6 +15,8 @@
                  [org.clojure/data.json "0.2.6"]
                  ^{:voom {:repo "git@github.com:onyx-platform/onyx.git" :branch "master"}}
                  [org.onyxplatform/onyx "0.14.1"]
+                 [com.fzakaria/slf4j-timbre "0.3.12"]                     ; Forward SLF4J to Timbre
+                 [com.taoensso/timbre "4.10.0"]                           ; Pure Clojure logging
                  [com.taoensso/carmine "2.15.1" :exclusions [com.taoensso/timbre com.taoensso/encore]]]
   :profiles {:dev {:dependencies [[aero "0.2.0"]]
                    :plugins [[lein-set-version "0.4.1"]
